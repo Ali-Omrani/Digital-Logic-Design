@@ -1,0 +1,8 @@
+module register (input [7:0]p,input clk,ld,output reg [7:0]w);
+  always @(posedge clk)
+  begin:my_loop
+    if (ld)w<=p;
+	 else w<=8'b00000000;
+	
+  end
+endmodule
